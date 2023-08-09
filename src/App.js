@@ -1,11 +1,11 @@
 import Title from './components/title';
-import TaskItem from './components/task-item';
+import TaskInput from './components/task-input';
 
 function App() {
   return (
     <div className='App'>
       <Title />
-      <TaskItem />
+      <TaskInput />
     </div>
   );
 }
