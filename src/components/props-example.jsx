@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function Counter() {
+export default function ParentComponent() {
   const [count, setCount] = useState(0);
 
   function handleIncrement() {
@@ -13,9 +13,19 @@ export default function Counter() {
 
   return (
     <div>
+      <h1>Parent Component</h1>
       <button onClick={handleDecrement}>-</button>
-      <p>{count}</p>
+      <ChildComponent count={count} />
       <button onClick={handleIncrement}>+</button>
+    </div>
+  );
+}
+
+function ChildComponent(props) {
+  return (
+    <div>
+      <h1>Child Component</h1>
+      <p>{props.count}</p>
     </div>
   );
 }
