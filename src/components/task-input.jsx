@@ -26,8 +26,15 @@ export default function TaskInput(props) {
   }
 
   return (
-    <form onSubmit={handleSubmitTask}>
-      <input type='text' value={taskInput} onChange={handleInputChange} />
+    <form className='form' onSubmit={handleSubmitTask}>
+      <label htmlFor='new-task'>New Task</label>
+      <input
+        type='text'
+        value={taskInput}
+        name='new-task'
+        placeholder='e.g Learn React'
+        onChange={handleInputChange}
+      />
       <button type='submit'>Add New Task</button>
     </form>
   );

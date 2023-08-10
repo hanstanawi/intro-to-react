@@ -1,38 +1,119 @@
 .App {
+  margin-top: 4rem;
+}
+
+.title {
+  width: 40rem;
+  margin: 2rem auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title h1, section {
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title p {
+  color: gray;
+  opacity: 0.8;
+  font-weight: 500;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form {
+  width: 40rem;
+  margin: 2rem auto;
+}
+
+.form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.form input {
+  display: block;
+  width: 100%;
+  font: inherit;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  background-color: #f7f5ef;
+  border: 0.2px solid #dddddd;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-bottom: 0.5rem;
+}
+
+.form input::placeholder {
+  opacity: 0.7;
+}
+
+.form button {
+  font: inherit;
+  background-color: #ebb002;
+  border: 1px solid #ebb002;
+  color: #201d0f;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.form button:hover,
+.form button:active {
+  background-color: #ebc002;
+  border-color: #ebc002;
+}
+
+.tasks-list {
+  width: 40rem;
+  margin: 2rem auto;
+  padding: 0;
+  list-style: none;
+}
+
+.task-item {
   display: flex;
-  flex-direction: column;
+  margin: 1rem 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 1rem 2rem;
+  background-color: #f7f5ef;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.task-item .title {
+  display: flex;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.task-item .title p {
+  padding: 0 0.5rem;
+  font-size: 1.25em;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.task-item.completed {
+  opacity: 20%;
+}
+
+.task-item.completed .title {
+  text-decoration: line-through;
+}
+
+.task-item button {
+  display: inline-block;
+  color: #fff;
+  background-color: #ebb002;
+  cursor: pointer;
+  margin: 0.5rem 0.25rem;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  border: none;
+}
+
+.task-item button:hover,
+.task-item button:active {
+  background-color: rgb(195, 3, 3);
 }
