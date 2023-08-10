@@ -1,10 +1,18 @@
 import { useState } from 'react';
 
-export default function TaskInput() {
+export default function TaskInput(props) {
   const [taskInput, setTaskInput] = useState('');
 
+  function handleSubmitTask(event) {
+    event.preventDefault();
+
+    if (taskInput !== '') {
+      props.onAddNewTask(taskInput);
+    }
+  }
+
   return (
-    <form>
+    <form onSubmit={handleSubmitTask}>
       <input
         type='text'
         value={taskInput}
