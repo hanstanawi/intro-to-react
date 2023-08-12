@@ -1,9 +1,9 @@
-export default function TaskItem() {
+export default function TaskItem(props) {
   return (
-    <article>
-      <h1>Learn React</h1>
-      <button>Update</button>
-      <button>Delete</button>
+    <article className='task-item'>
+      <div className='title'>
+        <p>{props.task.name}</p>
+      </div>
     </article>
   );
 }

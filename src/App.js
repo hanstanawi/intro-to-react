@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Title from './components/title';
 import TaskInput from './components/task-input';
+import TasksList from './components/tasks-list';
 import './App.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
     <div className='App'>
       <Title />
       <TaskInput onAddNewTask={handleAddNewTask} />
+      <TasksList tasks={tasks} />
     </div>
   );
 }
