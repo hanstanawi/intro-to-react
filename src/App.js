@@ -11,13 +11,34 @@ function App() {
     setTasks((currentTasks) => [...currentTasks, newTask]);
   }
 
-  console.log(tasks);
+  function handleUpdateTask(taskId) {
+    setTasks((currentTasks) => {
+      return currentTasks.map((task) => {
+        return task.id === taskId
+          ? {
+              ...task,
+              isDone: !task.isDone,
+            }
+          : task;
+      });
+    });
+  }
+
+  function handleDeleteTask(taskId) {
+    setTasks((currentTasks) => {
+      return currentTasks.filter((task) => task.id !== taskId);
+    });
+  }
 
   return (
     <div className='App'>
       <Title />
       <TaskInput onAddNewTask={handleAddNewTask} />
-      <TasksList tasks={tasks} />
+      <TasksList
+        tasks={tasks}
+        onUpdateTask={handleUpdateTask}
+        onDeleteTask={handleDeleteTask}
+      />
     </div>
   );
 }

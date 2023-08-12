@@ -96,7 +96,7 @@
 }
 
 .task-item.completed {
-  opacity: 20%;
+  opacity: 35%;
 }
 
 .task-item.completed .title {
@@ -114,7 +114,12 @@
   border: none;
 }
 
-.task-item button:hover,
-.task-item button:active {
+.task-item button.complete-btn:hover,
+.task-item button.complete-btn:active {
+  background-color: rgb(1, 131, 22);
+}
+
+.task-item button.delete-btn:hover,
+.task-item button.delete-btn:active {
   background-color: rgb(195, 3, 3);
 }
