@@ -22,6 +22,7 @@ export default function TaskInput(props) {
       };
 
       props.onAddNewTask(newTask);
+      setTaskInput('');
     }
   }
 

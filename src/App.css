@@ -76,7 +76,7 @@
   display: flex;
   margin: 1rem 0;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  padding: 1rem 2rem;
+  padding: 0.25rem 2rem;
   background-color: #f7f5ef;
   justify-content: space-between;
   align-items: center;
@@ -92,6 +92,7 @@
   font-size: 1.25em;
   font-weight: 400;
   line-height: 1.2;
+  color: black;
 }
 
 .task-item.completed {
