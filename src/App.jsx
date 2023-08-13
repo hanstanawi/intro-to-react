@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import Title from './components/title';
-import TaskInput from './components/task-input';
-import TasksList from './components/tasks-list';
+import Title from './components/app/title';
+import TaskInput from './components/app/task-input';
+import TasksList from './components/app/tasks-list';
 import './App.css';
 
 function App() {
